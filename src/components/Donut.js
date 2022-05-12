@@ -54,34 +54,39 @@ const options = {
     },
     responsive: [
       {
-        breakpoint: 1325,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
-        breakpoint: 1200,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
-        breakpoint: 1065,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
         breakpoint: 992,
         options: {
           chart: {
-            height: 200,
+            height: 380
+          },
+          legend: {
+            position: 'bottom'
+          }
+        }
+      },
+      {
+        breakpoint: 576,
+        options: {
+          chart: {
+            height: 320
+          },
+          plotOptions: {
+            pie: {
+              donut: {
+                labels: {
+                  show: true,
+                  name: {
+                    fontSize: '1.5rem'
+                  },
+                  value: {
+                    fontSize: '1rem'
+                  },
+                  total: {
+                    fontSize: '1.5rem'
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -101,6 +106,7 @@ const Donut = () => {
         type="donut" 
         options={options}
         series={series}
+        height="100%"
         />
 
     )

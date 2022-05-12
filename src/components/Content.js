@@ -83,14 +83,14 @@ const Content = () => {
         >
             <Grid
             mb="55px"
+           
             templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]}  gap={6}
             >
                 <GridItem 
                 display="flex"
+                height="100%"
                 flexDir="column"
-                
                 justifyContent="space-between"
-            
                 boxShadow="0px -2px 15px -3px rgba(0,0,0,0.1)" 
                 background="white"
                 padding="10px" 
@@ -100,16 +100,17 @@ const Content = () => {
                     <Divider my="2"/>
                     <Donut />
                 </GridItem>
-                <GridItem padding="10px"  boxShadow="0px -2px 15px -3px rgba(0,0,0,0.1)" background="white" borderRadius="10px">
+                <GridItem height="100%" padding="10px"  boxShadow="0px -2px 15px -3px rgba(0,0,0,0.1)" background="white" borderRadius="10px">
                     <Flex 
                     width="100%"
                     alignItems="center"
                     justifyContent="space-between"
                     >
                         <Heading fontSize="xl" as="h2" mb="1">Leads Statistics</Heading>
-                        <Box width="200px">
+                        <Box width="50%">
                         <Flatpickr style={{
                           background: "white" ,
+                          width:"100%",
                           padding: "5px",
                           borderRadius: "10px" ,
                           border : "1px solid #F1EEE9",

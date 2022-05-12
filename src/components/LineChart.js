@@ -1,107 +1,47 @@
 import React from "react";
 import Chart from "react-apexcharts";
-
 const options = {
-    chart: {
-      toolbar: {
+  chart: {
+    parentHeightOffset: 0,
+    toolbar: {
+      show: false
+    }
+  },
+  plotOptions: {
+    bar: {
+      horizontal: true,
+      barHeight: '30%',
+      borderRadius: [10]
+    }
+  },
+  grid: {
+    xaxis: {
+      lines: {
         show: false
       }
-    },
-    dataLabels: {
-      enabled: false
-    },
-    legend: {
-      show: true,
-      position: 'bottom'
-    },
-    comparedResult: [2, -3, 8],
-    labels: ['Invalid leads', 'New Leads', 'Valid Leads'],
-    stroke: { width: 0 },
-    colors: ['#dc3545', '#007bff', "#28a745"],
-    grid: {
-      padding: {
-        right: -20,
-        bottom: -8,
-        left: -20
-      }
-    },
-    plotOptions: {
-      pie: {
-        startAngle: -10,
-        donut: {
-          labels: {
-            show: true,
-            name: {
-              offsetY: 15
-            },
-            value: {
-              offsetY: -15,
-              formatter(val) {
-                return "20%"
-              }
-            },
-            total: {
-              show: true,
-              offsetY: 15,
-              label: 'Total leads',
-              formatter() {
-                return "100%"
-              }
-            }
-          }
-        }
-      }
-    },
-    responsive: [
-      {
-        breakpoint: 1325,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
-        breakpoint: 1200,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
-        breakpoint: 1065,
-        options: {
-          chart: {
-            height: 300
-          }
-        }
-      },
-      {
-        breakpoint: 992,
-        options: {
-          chart: {
-            height: 200
-          }
-        }
-      }
-    ]
+    }
+  },
+  colors: "red",
+  dataLabels: {
+    enabled: false
+  },
+  xaxis: {
+    categories: ['MON, 11', 'THU, 14', 'FRI, 15', 'MON, 18', 'WED, 20', 'FRI, 21', 'MON, 23']
+  },
+  yaxis: {
+    opposite: "rtl"
   }
-  const series = [
-    20,
-    60,
-    20
-    
-  ]
+}
+const series = [
+  {
+    data: [700, 350, 480, 600, 210, 550, 150]
+  }
+]
 
 
 const LineChart = () => {
     return (
-        <Chart 
-        type="area" 
-        options={options}
-        series={series}
-        />
+      <Chart options={options} series={series} type='bar' height={"100%"} />
 
     )
 }

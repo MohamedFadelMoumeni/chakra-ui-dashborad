@@ -36,3 +36,8 @@ h1,h2,h3,h4,h5,h6,p{
 .rdt_Table{
   border-radius: 10px;
 }
+.apexcharts-canvas,  .apexchartssxgaoiisk, .apexcharts-theme-light{
+  height: 100% !important;
+  max-height: 500px !important;
+}
+
