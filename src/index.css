@@ -1,13 +1,38 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+*{
+  box-sizing: border-box;
+}
+h1,h2,h3,h4,h5,h6,p{
+  margin: 0;
+  padding: 0;
+}
+.flatpickr-calendar, .flatpickr-weekdays, .flatpickr-month , .flatpickr-monthDropdown-months, .flatpickr-weekdaycontainer, .flatpickr-weekday{
+  background: #fff  !important;
+  color: #000 !important;
+}
+.flatpickr-prev-month , .flatpickr-next-month {
+  fill: rgba(0,0,0,.9);
+}
+.selected {
+  border: 0;
+}
+.rdt_TableCol{
+  background-color: #F1EEE9 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.rdt_Table:not(:last-child){
+  border-bottom: 1px solid #000;
+}
+.rdt_Table{
+  border-radius: 10px;
 }
